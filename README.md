@@ -39,4 +39,48 @@ servise fazla yüklenmemeyi göz önünde bulundurmalıdır.
 
 # Kullanım
 
-to be implemented
+## Vatandaş Sorgulama
+
+`pynvi.verify_identity` metodu ile vatandaş sorgusu yapabilirsiniz.
+
+| Argüman | Tür | Varsayılan |
+|---------|-----|------------|
+| identity_number | int | - |
+| name            | str | - |
+| surname         | str | - |
+| year_of_birth   | int | - |
+
+### Örnekler
+
+```python
+pynvi.verify_identity(11111111111, "ERAY", "ERDİN", 1994)
+# True
+```
+
+ > #### Uyarı
+ > NVİ, `name` ve `surname` değerlerini hepsi büyük harf olarak kabul
+ > etmektedir. Ad ve soyadın hepsinin büyük harf olmaması durumunda
+ > ise `False` döndürmektedir. Bu kütüphane, `name` ve `surname`
+ > değerlerinizi otomatik olarak büyük harfe döndürmeyecektir. Bunu
+ > sizin sağlamanız beklenmektedir.
+
+```python
+# Eğer yukarıdaki örnek doğruysa
+pynvi.verify_identity(11111111111, "Eray", "Erdin", 1994)
+# False
+pynvi.verify_identity(11111111111, "eray", "erdin", 1994)
+```
+
+ > #### Uyarı
+ > Sunuucu tarafından bir hata geldiğinde bu size klasik bir
+ > `Exception` ile yansıtılacaktır.
+
+```python
+try:
+    pynvi.verify_identity(11111111111, "ERAY", "ERDİN", 1994)
+except Exception as e:
+    # bir hata var ise buradayız
+    # birçok sebepten sunucu hata verebilir
+    # sunucu meşgul ya da düşmüş olabilir
+    print(e)
+```
