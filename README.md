@@ -11,8 +11,8 @@
 
 |             | Build | Coverage |
 |-------------|-------|----------|
-| master      | [![Travis (.org) master](https://img.shields.io/travis/erayerdin/pynvi/master.svg?style=flat-square&logo=travis&logoColor=white)][travis_url]           | [![Codecov master](https://img.shields.io/codecov/c/github/erayerdin/pynvi/master.svg?style=flat-square&logo=codecov&logoColor=white)][codecov_url]      |
-| development | [![Travis (.org) development](https://img.shields.io/travis/erayerdin/pynvi/development.svg?style=flat-square&logo=travis&logoColor=white)][travis_url] | [![Codecov development](https://img.shields.io/codecov/c/github/erayerdin/pynvi/development.svg?style=flat-square&logo=codecov&logoColor=white)][codecov_url] |
+| master      | [![Travis (.org) master](https://img.shields.io/travis/com/erayerdin/pynvi/master.svg?style=flat-square&logo=travis&logoColor=white)][travis_url]           | [![Codecov master](https://img.shields.io/codecov/c/github/erayerdin/pynvi/master.svg?style=flat-square&logo=codecov&logoColor=white)][codecov_url]      |
+| development | [![Travis (.org) development](https://img.shields.io/travis/com/erayerdin/pynvi/development.svg?style=flat-square&logo=travis&logoColor=white)][travis_url] | [![Codecov development](https://img.shields.io/codecov/c/github/erayerdin/pynvi/development.svg?style=flat-square&logo=codecov&logoColor=white)][codecov_url] |
 
 [travis_url]: https://travis-ci.org/erayerdin/pynvi
 [codecov_url]: https://codecov.io/gh/erayerdin/pynvi
