@@ -7,7 +7,7 @@ kütüphanesidir.
 """
 
 __author__ = "Eray Erdin"
-__version__ = "0.1.0pre1"
+__version__ = "0.1.0pre2"
 
 URL = "https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx"
 
