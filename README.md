@@ -28,8 +28,8 @@ Genel Müdürlüğü'nün SOAP servisinin verdiği hizmetlerden
 yararlanılabilir. Neler yapılacağına dair bir fikir edinmek için
 [ilgili bağlantıya gözatın](https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx).
 
-Her ne kadar resmi kaynaklarda kullanımın sınırları ([throttling](https://en.wikipedia.org/wiki/Throttling_process_(computing) gibi) belirtilmemişse de geliştirici
-servise fazla yüklenmemeyi göz önünde bulundurmalıdır.
+Her ne kadar resmi kaynaklarda kullanımın sınırları ([throttling](https://en.wikipedia.org/wiki/Throttling_process_(computing) gibi)) belirtilmemişse de geliştirici servise fazla yüklenmemeyi göz önünde
+bulundurmalıdır.
 
 # Yükleme
 
