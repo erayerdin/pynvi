@@ -9,6 +9,7 @@ jobs:
     install:
       - pip install -r requirements.txt
       - pip install -r dev.requirements.txt
+      - pip install black
     script:
       - black --check --diff -l 79 --verbose pynvi/
       - black --check --diff -l 79 --verbose tests/
