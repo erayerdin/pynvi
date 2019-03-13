@@ -63,12 +63,16 @@ class TestVerifyIdentity:
 
         assert not val
 
-    def test_error(self, mocker):
+    def test_nvi_exception(self, mocker):
         mocker.patch("pynvi.requests.post")
 
         pynvi.requests.post.return_value.status_code = 500
         with open("resources/error_verify_identity.xml", "r") as f:
             pynvi.requests.post.return_value.text = f.read()
 
-        with pytest.raises(Exception):
+        with pytest.raises(pynvi.NVIException):
             pynvi.verify_identity(self.id_number, self.name, self.surname, "0")
+
+    def test_type_error(self):
+        with pytest.raises(TypeError):
+            pynvi.verify_identity("a", "b", "c", "d")
