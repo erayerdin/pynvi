@@ -7,7 +7,7 @@ kütüphanesidir.
 import requests, textwrap
 
 __author__ = "Eray Erdin"
-__version__ = "0.1.0pre4"
+__version__ = "0.1.0pre5"
 
 URL = "https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx"
 
