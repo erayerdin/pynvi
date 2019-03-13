@@ -11,7 +11,7 @@ with open("requirements.txt", "r") as f:
 with open("dev.requirements.txt", "r") as f:
     DEPS_TEST = f.readlines()
 
-GIT_URL = "https://github.com/erayerdin/pynvi/archive/{}.tar.gz"
+GITHUB_RELEASE_URL = "https://github.com/erayerdin/pynvi/archive/v{}.tar.gz"
 
 setup(
     name="pynvi",
@@ -21,7 +21,7 @@ setup(
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/erayerdin/pynvi",
-    download_url=GIT_URL.format(pynvi.__version__),
+    download_url=GITHUB_RELEASE_URL.format(pynvi.__version__),
     packages=["pynvi"],
     include_package_data=True,
     keywords="pynvi nvi nüfus vatandaşlık işleri türkiye",

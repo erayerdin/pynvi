@@ -7,9 +7,30 @@ kütüphanesidir.
 """
 
 __author__ = "Eray Erdin"
-__version__ = "0.1.0pre3"
+__version__ = "0.1.0pre4"
 
 URL = "https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx"
+
+
+class NVIException(Exception):
+    """
+    NVI sunucusu tarafından 200 olmayan cevaplar için bu exception kullanılır.
+    """
+
+    def __init__(self, response: requests.Response):
+        self.response = response
+        self.message = """
+NVI server could not process the request properly.
+
+Response Code: {code}
+
+Response Content
+----------------
+{content}
+        """.strip().format(
+            code=response.status_code, content=response.text
+        )
+        super().__init__(self.message)
 
 
 def verify_identity(
@@ -56,4 +77,4 @@ def verify_identity(
             in response_body
         )
 
-    raise Exception(response_body)
+    raise NVIException(response)

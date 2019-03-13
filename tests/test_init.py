@@ -1,6 +1,28 @@
 import pynvi, pytest
 
 
+class TestNVIException:
+    class DummyResponse:
+        status_code = 500
+        text = "dummy response"
+
+    @classmethod
+    def setup_class(cls):
+        cls.exception = pynvi.NVIException(cls.DummyResponse())
+
+    def test_issubclass(self):
+        assert issubclass(pynvi.NVIException, Exception)
+
+    def test_has_doc(self):
+        assert pynvi.NVIException.__doc__ is not None
+
+    def test_response_code(self):
+        assert "Response Code: 500" in self.exception.message
+
+    def test_response_content(self):
+        assert "dummy response" in self.exception.message
+
+
 class TestVerifyIdentity:
     @classmethod
     def setup_class(cls):
