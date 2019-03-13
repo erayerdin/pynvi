@@ -1,11 +1,12 @@
 language: python
 cache: pip
+dist: xenial
 
 if: commit_message !~ /appveyor/
 jobs:
   include:
-  - stage: Black Style Checking
-    python: '3.6'
+  - stage: Style Checking with Black
+    python: '3.7'
     install:
       - pip install -r requirements.txt
       - pip install -r dev.requirements.txt
@@ -14,20 +15,26 @@ jobs:
       - black --check --diff -l 79 --verbose pynvi/
       - black --check --diff -l 79 --verbose tests/
       - black --check --diff -l 79 --verbose setup.py
-  - stage: Testing with Python 3.5
+  - stage: Testing
     python: '3.5'
     install:
     - pip install -r requirements.txt
     - pip install -r dev.requirements.txt
     script: pytest tests/
-  - stage: Testing with Python 3.6
+  - stage: Testing
     python: '3.6'
     install:
     - pip install -r requirements.txt
     - pip install -r dev.requirements.txt
     script: pytest tests/
-  - stage: Covering Package
-    python: '3.6'
+  - stage: Testing
+    python: '3.7'
+    install:
+    - pip install -r requirements.txt
+    - pip install -r dev.requirements.txt
+    script: pytest tests/
+  - stage: Covering
+    python: '3.7'
     install:
     - pip install -r requirements.txt
     - pip install -r dev.requirements.txt
