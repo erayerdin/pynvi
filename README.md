@@ -69,6 +69,7 @@ pynvi.verify_identity(11111111111, "ERAY", "ERDİN", 1994)
 pynvi.verify_identity(11111111111, "Eray", "Erdin", 1994)
 # False
 pynvi.verify_identity(11111111111, "eray", "erdin", 1994)
+# False
 ```
 
  > #### Uyarı
