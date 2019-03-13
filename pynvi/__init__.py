@@ -42,10 +42,11 @@ def verify_identity(
 
     Girdilerle ilgili kişinin TC vatandaşı olup olmadığını doğrular.
     """
-    identity_number = int(identity_number)
-    name = str(name)
-    surname = str(surname)
-    year_of_birth = int(year_of_birth)
+    try:
+        identity_number = int(identity_number)
+        year_of_birth = int(year_of_birth)
+    except ValueError as e:
+        raise TypeError(str(e)) from e
 
     request_body = """
     <?xml version="1.0" encoding="utf-8"?>
