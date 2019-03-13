@@ -73,15 +73,15 @@ pynvi.verify_identity(11111111111, "eray", "erdin", 1994)
 ```
 
  > #### Uyarı
- > Sunuucu tarafından bir hata geldiğinde bu size klasik bir
- > `Exception` ile yansıtılacaktır.
+ > Sunuucu tarafından bir hata geldiğinde `NVIException` ile yakalayabilirsiniz.
 
 ```python
 try:
     pynvi.verify_identity(11111111111, "ERAY", "ERDİN", 1994)
-except Exception as e:
+except pynvi.NVIException as e:
     # bir hata var ise buradayız
     # birçok sebepten sunucu hata verebilir
     # sunucu meşgul ya da düşmüş olabilir
-    print(e)
+    print(e.message)  # hata mesajı
+    print(e.response)  # hataya ait Response
 ```
