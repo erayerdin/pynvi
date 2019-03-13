@@ -77,4 +77,4 @@ def verify_identity(
             in response_body
         )
 
-    raise Exception(response_body)
+    raise NVIException(response)
