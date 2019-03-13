@@ -1,10 +1,10 @@
-import requests
-
 """
 `pynvi` Türkiye Cumhuriyeti Nüfus ve Vatandaşlık İşleri Genel
 Müdürlüğü SOAP servisi için oluşturulmuş köprü bir Python
 kütüphanesidir.
 """
+
+import requests
 
 __author__ = "Eray Erdin"
 __version__ = "0.1.0pre4"
